@@ -1,0 +1,15 @@
+query getBlog($slug: String!) {
+  getObject(
+    bucket_slug: "craig"
+    input: {
+      slug: $slug
+      read_key: "iHIswEFFeDTFbP1XKoLC3gEV2fCSXgtXPXzC9OQNStzwqX0FdM"
+    }
+  ) {
+    title
+    content
+    metadata
+    published_at
+    order
+  }
+}
