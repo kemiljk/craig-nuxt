@@ -25,7 +25,8 @@
           </keep-alive>
         </div>
       </div>
-      <div class="flex justify-center items-center pt-16">
+      <Divider class="py-16" />
+      <div class="flex justify-center items-center">
         <H2Header>Currently trying out</H2Header>
       </div>
       <div class="flex max-w-2xl mt-4 mx-auto justify-center">

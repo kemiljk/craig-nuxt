@@ -20,7 +20,7 @@
     "cosmicjs": "^3.3.2",
     "eslint": "^7.17.0",
     "feed": "^4.2.1",
-    "fontsource-inter": "^3.1.7",
+    "fontsource-rubik": "^4.0.0",
     "graphql": "^15.4.0",
     "lint": "eslint --ext .ts,.js,.vue .",
     "nuxt": "^2.14.9",
