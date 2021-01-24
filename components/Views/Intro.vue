@@ -1,16 +1,19 @@
 <template>
   <div v-if="intro.metadata">
-    <img :src="intro.metadata.hero.imgix_url" class="h-80 w-full object-cover ">
+    <img
+      :src="intro.metadata.hero.imgix_url"
+      class="h-80 w-full rounded-md md:rounded-none object-cover"
+    />
     <div class="max-w-3xl mx-auto">
-    <header class="container pb-2 max-w-xl mx-auto">
-      <h1 class="pt-16 pb-8 text-center">
-        {{ intro.title }}
-      </h1>
-    </header>
-    <header class="pb-4 max-w-xl mx-auto">
-      <p class="text-xl text-center" v-html="intro.content" />
-      <div class="flex flex-col md:flex-row justify-center mt-6">
-        <div class="flex flex-col md:flex-row md:space-x-2 pt-4">
+      <header class="container pb-2 max-w-xl mx-auto">
+        <h1 class="pt-16 pb-8 text-center">
+          {{ intro.title }}
+        </h1>
+      </header>
+      <header class="pb-4 max-w-xl mx-auto">
+        <p class="text-xl text-center" v-html="intro.content" />
+        <div class="flex flex-col md:flex-row justify-center mt-6">
+          <div class="flex flex-col md:flex-row md:space-x-2 pt-4">
             <a href="https://www.facebook.com">
               <Button color="lighterBlue" class="mt-2 md:mt-0">
                 <template #icon>
@@ -45,18 +48,23 @@
               </Button>
             </a>
           </div>
-      </div>
-    </header>
+        </div>
+      </header>
     </div>
   </div>
 </template>
 
 <script>
-import { InfoIcon, LinkedinIcon, FacebookIcon, MailIcon } from "vue-feather-icons";
+import {
+  InfoIcon,
+  LinkedinIcon,
+  FacebookIcon,
+  MailIcon,
+} from "vue-feather-icons";
 
 export default {
   name: "HomeBody",
-    components: {
+  components: {
     InfoIcon,
     MailIcon,
     LinkedinIcon,
@@ -65,8 +73,8 @@ export default {
   props: {
     intro: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
 };
 </script>
