@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="`/blogs/${blog.slug}`" class="cursor-pointer">
     <button
-      class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 hover:dark:bg-gray-800 py-2 px-8 rounded-md text-left w-full focus:outline-none focus:ring-2 focus:ring-white transition ease-linear duration-200"
+      class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 py-2 px-8 rounded-md text-left w-full focus:outline-none focus:ring-2 focus:ring-white transition ease-linear duration-200"
       v-if="blog.metadata"
     >
       <header class="flex items-top justify-between pt-4 pb-2">
@@ -23,7 +23,7 @@
       <p class="text-gray-700 dark:text-gray-300 pt-2 pb-4 font-medium mb-0">
         {{ blog.metadata.snippet }}
       </p>
-      <p class="font-medium text-teal-600 dark:text-teal-500">Read more</p>
+      <p class="font-medium text-blue-600 dark:text-blue-400">Read more</p>
     </button>
   </NuxtLink>
 </template>

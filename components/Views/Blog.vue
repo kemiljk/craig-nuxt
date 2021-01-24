@@ -40,7 +40,7 @@ export default {
         type: "blog",
         title: this.blog.title,
         description: this.blog.metadata.snippet,
-        url: "https://kejk.tech/thoughts/" + `${this.$route.params.id}`,
+        url: "https://craigturner.me/blogs/" + `${this.$route.params.id}`,
         mainImage: this.blog.metadata.hero.imgix_url,
       };
       return getSiteMeta(metaData);

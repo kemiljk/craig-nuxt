@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="bg-white dark:bg-black" v-on-clickaway="close">
-      <div class="w-full fixed z-50 mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white dark:bg-black w-full fixed z-50 mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-center w-full h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">

@@ -144,11 +144,6 @@ export default {
         rel: "canonical",
         href: "https://kejk.tech",
       },
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap",
-      },
     ],
   },
 
@@ -186,16 +181,6 @@ export default {
     "@nuxtjs/sitemap",
     "vue-scrollto/nuxt",
   ],
-
-  extends: ["@nuxtjs/eslint-config-typescript"],
-
-  typescript: {
-    typeCheck: {
-      eslint: {
-        files: "./**/*.{ts,js,vue}",
-      },
-    },
-  },
 
   apollo: {
     clientConfigs: {

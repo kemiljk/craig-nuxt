@@ -2,42 +2,50 @@
   <div class="relative mx-auto">
     <Nav>
       <NavItem to="/">Home</NavItem>
-      <NavItem to="/about">About</NavItem>
       <NavItem to="/blogs" isActive id="BLOG" v-scroll-to="'#BLOG'">
         Blog
       </NavItem>
     </Nav>
-    <div class="max-w-3xl mx-auto px-4">
-      <Header>Blog</Header>
-      <Subheader>
-        <template #text> Craig loves bacon. </template>
-        <template #buttons>
-          <SubscribeCard class="max-w-3xl px-8" />
-        </template>
-      </Subheader>
+    <div class="max-w-3xl mx-auto px-4 pt-16">
+      <SubscribeCard class="max-w-2xl mx-auto" />
       <div class="flex mt-4 mx-auto justify-center">
         <div
-          class="grid grid-row xs:grid-cols-1 sm:grid-cols-2 gap-8"
-          v-if="blogs.blogList"
+          class="top-16 flex flex-row py-4 space-x-2 overflow-x-auto scrollbar-hidden"
         >
-          <div v-for="(blog, index) in blogs.blogList" :key="index">
-            <keep-alive>
-              <BlogCard :blog="blog" />
-            </keep-alive>
-          </div>
+          <button
+            v-for="tab in tabs"
+            :key="tab"
+            @click="selected = tab"
+            class="block px-4 py-2 text-gray-400 dark:text-gray-500 border-b-2 border-transparent hover:border-gray-400 dark:hover:border-gray-500"
+            :class="[{ active: selected === tab }]"
+          >
+            {{ tab }}
+          </button>
         </div>
       </div>
+      <component :is="selected" class="tab mt-8"></component>
     </div>
   </div>
 </template>
 
 <script>
 import getSiteMeta from "~/utils/getSiteMeta.js";
-import BlogCard from "../../components/Cards/BlogCard";
+import All from "../../components/Tabs/All";
+import Posts from "../../components/Tabs/Posts";
+import Videos from "../../components/Tabs/Videos";
 
 export default {
   components: {
-    BlogCard,
+    All,
+    Posts,
+    Videos,
+  },
+  data() {
+    return {
+      loading: false,
+      tabs: ["All", "Posts", "Videos"],
+      selected: "All",
+    };
   },
   computed: {
     meta() {
@@ -66,11 +74,6 @@ export default {
         title: "KEJK | Thoughts",
         meta: [...this.meta],
         link: [{ rel: "canonical", href: "https://kejk.tech/thoughts" }],
-      };
-    },
-    data() {
-      return {
-        loading: false,
       };
     },
   },
