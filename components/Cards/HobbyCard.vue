@@ -1,11 +1,14 @@
 <template>
-  <a :href="hobby.metadata.url" class="cursor-pointer">
+  <a :href="hobby.metadata.url" target="_blank" class="cursor-pointer">
     <button
       class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 p-4 rounded-md text-left w-full focus:outline-none focus:ring-2 focus:ring-white transition ease-linear duration-200"
       v-if="hobby.metadata"
     >
-    <div class="flex items-center">
-      <img :src="hobby.metadata.hero.imgix_url" class="w-24 h-24 mr-4 rounded">
+      <div class="flex items-center">
+        <img
+          :src="hobby.metadata.hero.imgix_url"
+          class="w-24 h-24 mr-4 rounded"
+        />
         <div>
           <header>
             <h1 class="text-black dark:text-white text-lg pb-2 font-bold">

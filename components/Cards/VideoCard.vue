@@ -1,5 +1,5 @@
 <template>
-  <a :href="video.metadata.url" class="cursor-pointer">
+  <a :href="video.metadata.url" target="_blank" class="cursor-pointer">
     <button
       class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 p-4 rounded-md text-left w-full md:1/2 focus:outline-none focus:ring-2 focus:ring-white transition ease-linear duration-200"
       v-if="video.metadata"

@@ -9,8 +9,8 @@
       <div class="flex justify-center items-center pt-16">
         <H2Header>Latest posts</H2Header>
       </div>
-      <div class="flex mt-4 mx-auto justify-center">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+      <div class="flex max-w-2xl mt-4 mx-auto justify-center">
+        <div class="grid w-full sm:grid-cols-2 md:grid-cols-2 gap-4">
           <div v-for="blog in blogs" :key="blog._id">
             <keep-alive>
               <BlogCard :blog="blog" />
