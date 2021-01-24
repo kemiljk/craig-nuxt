@@ -2,7 +2,6 @@
   <div class="relative mx-auto">
     <Nav>
       <NavItem to="/">Home</NavItem>
-      <NavItem to="/about">About</NavItem>
       <NavItem to="/blogs" isActive id="BLOG" v-scroll-to="'#BLOG'"
         >Blog</NavItem
       >
