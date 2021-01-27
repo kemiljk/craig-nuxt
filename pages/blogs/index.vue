@@ -38,24 +38,23 @@ export default {
   components: {
     All,
     Posts,
-    Videos,
+    Videos
   },
   data() {
     return {
       loading: false,
       tabs: ["All", "Posts", "Videos"],
-      selected: "All",
+      selected: "All"
     };
   },
   computed: {
     meta() {
       const metaData = {
-        title: "KEJK | Thoughts",
-        description:
-          "Thoughts on Design and Development from here and around the web.",
-        url: "https://kejk.tech/thoughts",
+        title: "Craig Turner | Blog",
+        description: "A blog about me",
+        url: "https://www.craigturner.me",
         mainImage:
-          "https://res.cloudinary.com/kejk/image/upload/q_auto,f_auto/v1610305389/OG_Image_wlile7.png",
+          "https://res.cloudinary.com/kejk/image/upload/v1611777093/Meta_Image_kequ00.png"
       };
       return getSiteMeta(metaData);
     },
@@ -63,7 +62,7 @@ export default {
       let blogs = this.$store.getters.getBlog;
       let blogList = [];
 
-      blogs.forEach(function (blog) {
+      blogs.forEach(function(blog) {
         blogList.push(blog);
       });
 
@@ -71,11 +70,11 @@ export default {
     },
     head() {
       return {
-        title: "KEJK | Thoughts",
+        title: "Craig Turner | Blog",
         meta: [...this.meta],
-        link: [{ rel: "canonical", href: "https://kejk.tech/thoughts" }],
+        link: [{ rel: "canonical", href: "https://www.craigturner.me" }]
       };
-    },
-  },
+    }
+  }
 };
 </script>

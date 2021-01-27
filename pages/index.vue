@@ -86,7 +86,7 @@ const Cosmic = require("cosmicjs");
 const api = Cosmic();
 const bucket = api.bucket({
   slug: "craig",
-  read_key: "iHIswEFFeDTFbP1XKoLC3gEV2fCSXgtXPXzC9OQNStzwqX0FdM",
+  read_key: "iHIswEFFeDTFbP1XKoLC3gEV2fCSXgtXPXzC9OQNStzwqX0FdM"
 });
 
 export default {
@@ -96,22 +96,23 @@ export default {
         title: "Craig Turner | Home",
         description: "Finding the best tech for good talent",
         url: "https://craigturner.me/",
-        mainImage: "#",
+        mainImage:
+          "https://res.cloudinary.com/kejk/image/upload/v1611777093/Meta_Image_kequ00.png"
       };
       return getSiteMeta(metaData);
-    },
+    }
   },
   head() {
     return {
       title: "Craig Turner | Home",
       meta: [...this.meta],
-      link: [{ rel: "canonical", href: "https://craigturner.me/" }],
+      link: [{ rel: "canonical", href: "https://craigturner.me/" }]
     };
   },
   components: {
     InfoIcon,
     MailIcon,
-    ArrowRightIcon,
+    ArrowRightIcon
   },
   data() {
     return {
@@ -123,7 +124,7 @@ export default {
       newsletters: {},
       about: {},
       intro: {},
-      slug: "",
+      slug: ""
     };
   },
   created() {
@@ -145,9 +146,9 @@ export default {
           limit: 2,
           type: "blogs",
           props: "_id,slug,title,content,metadata,created_at,published_at",
-          sort: "-created_at",
+          sort: "-created_at"
         })
-        .then((data) => {
+        .then(data => {
           const blogs = data.objects;
           this.loading = false;
           this.blogs = blogs;
@@ -161,9 +162,9 @@ export default {
           limit: 4,
           type: "hobbies",
           props: "_id,slug,title,content,metadata,created_at,published_at",
-          sort: "-created_at",
+          sort: "-created_at"
         })
-        .then((data) => {
+        .then(data => {
           const hobbies = data.objects;
           this.loading = false;
           this.hobbies = hobbies;
@@ -177,9 +178,9 @@ export default {
           limit: 4,
           type: "books",
           props: "_id,slug,title,content,metadata,created_at,published_at",
-          sort: "-created_at",
+          sort: "-created_at"
         })
-        .then((data) => {
+        .then(data => {
           const books = data.objects;
           this.loading = false;
           this.books = books;
@@ -193,9 +194,9 @@ export default {
           limit: 4,
           type: "podcasts",
           props: "_id,slug,title,content,metadata,created_at,published_at",
-          sort: "-created_at",
+          sort: "-created_at"
         })
-        .then((data) => {
+        .then(data => {
           const podcasts = data.objects;
           this.loading = false;
           this.podcasts = podcasts;
@@ -209,9 +210,9 @@ export default {
           limit: 4,
           type: "newsletters",
           props: "_id,slug,title,content,metadata,created_at,published_at",
-          sort: "-created_at",
+          sort: "-created_at"
         })
-        .then((data) => {
+        .then(data => {
           const newsletters = data.objects;
           this.loading = false;
           this.newsletters = newsletters;
@@ -222,9 +223,9 @@ export default {
       await bucket
         .getObject({
           slug: "about",
-          props: "slug,title,content,metadata.categories",
+          props: "slug,title,content,metadata.categories"
         })
-        .then((data) => {
+        .then(data => {
           this.about = data.object;
           this.loading = false;
         });
@@ -234,13 +235,13 @@ export default {
       await bucket
         .getObject({
           slug: "intro",
-          props: "slug,title,content,metadata.hero.imgix_url",
+          props: "slug,title,content,metadata.hero.imgix_url"
         })
-        .then((data) => {
+        .then(data => {
           this.intro = data.object;
           this.loading = false;
         });
-    },
-  },
+    }
+  }
 };
 </script>
