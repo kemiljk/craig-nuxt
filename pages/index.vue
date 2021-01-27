@@ -4,7 +4,7 @@
       <NavItem to="/" isActive id="HOME" v-scroll-to="'#HOME'">Home</NavItem>
       <NavItem to="/blogs">Blog</NavItem>
     </Nav>
-    <div class="max-w-full mx-auto px-4 py-16">
+    <div class="max-w-full mx-auto px-4 py-24">
       <Intro :intro="intro" />
       <div class="flex justify-center items-center pt-16">
         <H2Header>Latest posts</H2Header>

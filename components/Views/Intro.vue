@@ -1,5 +1,5 @@
 <template>
-  <div v-if="intro.metadata">
+  <div v-if="intro.metadata mx-auto">
     <img
       :src="intro.metadata.hero.imgix_url"
       class="h-80 w-full md:w-80 rounded-md object-cover"
