@@ -1,8 +1,8 @@
 <template>
-  <div v-if="intro.metadata mx-auto">
+  <div v-if="intro.metadata">
     <img
       :src="intro.metadata.hero.imgix_url"
-      class="h-80 w-full md:w-80 rounded-md object-cover"
+      class="h-80 w-full md:w-80 mx-auto rounded-md object-cover"
     />
     <div class="max-w-3xl mx-auto">
       <header class="container pb-2 max-w-xl mx-auto">
