@@ -4,7 +4,7 @@
       <NavItem to="/" isActive id="HOME" v-scroll-to="'#HOME'">Home</NavItem>
       <NavItem to="/blogs">Blog</NavItem>
     </Nav>
-    <div class="max-w-full mx-auto px-4 md:px-0 py-16">
+    <div class="max-w-full mx-auto px-4 py-16">
       <Intro :intro="intro" />
       <div class="flex justify-center items-center pt-16">
         <H2Header>Latest posts</H2Header>
@@ -158,7 +158,7 @@ export default {
       this.loading = true;
       await bucket
         .getObjects({
-          limit: 2,
+          limit: 4,
           type: "hobbies",
           props: "_id,slug,title,content,metadata,created_at,published_at",
           sort: "-created_at",
@@ -174,7 +174,7 @@ export default {
       this.loading = true;
       await bucket
         .getObjects({
-          limit: 2,
+          limit: 4,
           type: "books",
           props: "_id,slug,title,content,metadata,created_at,published_at",
           sort: "-created_at",
@@ -190,7 +190,7 @@ export default {
       this.loading = true;
       await bucket
         .getObjects({
-          limit: 2,
+          limit: 4,
           type: "podcasts",
           props: "_id,slug,title,content,metadata,created_at,published_at",
           sort: "-created_at",
@@ -206,7 +206,7 @@ export default {
       this.loading = true;
       await bucket
         .getObjects({
-          limit: 2,
+          limit: 4,
           type: "newsletters",
           props: "_id,slug,title,content,metadata,created_at,published_at",
           sort: "-created_at",

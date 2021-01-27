@@ -2,7 +2,7 @@
   <div v-if="intro.metadata">
     <img
       :src="intro.metadata.hero.imgix_url"
-      class="h-80 w-full rounded-md md:rounded-none object-cover"
+      class="h-80 w-full md:w-80 rounded-md object-cover"
     />
     <div class="max-w-3xl mx-auto">
       <header class="container pb-2 max-w-xl mx-auto">
@@ -14,7 +14,7 @@
         <p class="text-xl text-center" v-html="intro.content" />
         <div class="flex flex-col md:flex-row justify-center mt-6">
           <div class="flex flex-col md:flex-row md:space-x-2 pt-4">
-            <a href="https://www.facebook.com">
+            <a href="https://www.facebook.com/craig.turner7">
               <Button color="lighterBlue" class="mt-2 md:mt-0">
                 <template #icon>
                   <facebook-icon
